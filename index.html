@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Final Exam</title>
+        <link rel="stylesheet" href="./css/styles.css">
+        <script src="./js/main.js" defer></script>
+    </head>
+
+    <body>
+   
+        <div class="wrapper-parent">
+            <div class="children child1">
+                <h1>Adding new Movie, Showtime and Price</h1>
+             
+                </ul>
+                <p>The idea here is to add 1 Movie-Showtime-Price Object for each showing of a particular movie and push it into a Movie Array - for example:<br>
+                    
+                <ul>
+                    <li>Love Actually - 11am - 4.99</li>
+                    <li>Love Actually - 2pm - 6.99</li>
+                    <li>Love Actually - 5pm - 8.99</li>
+                    <li>Love Actually - 8pm - 11.99</li>
+                    <li>Notting Hill - 11am - 4.99</li>
+                    <li>etc...</li>
+                </ul>
+
+                <hr>
+                
+                <div class="c1-parent">
+                    <label class="c1-children" for="c1Movie">Please Enter the Movie Name:</label>
+                    <input class="c1-children" type="text" id="c1Movie">
+                    <label class="c1-children" for="c1Time">Please Enter the Showtime:<br>(1, 3, 5, etc...whole numbers)</label>
+                    <input class="c1-children" type="text" id="c1Time">
+                    <label class="c1-children" for="c1Price">Please Enter the Admission Price:</label>
+                    <input class="c1-children" type="text" id="c1Price">
+                </div>
+                <button id='addMovie'>Add Movie Information</button>
+                <p id="c1Output"></p>
+            </div>
+            <div class="children child2">
+                <h1>Preview Available Movies and Showtimes</h1>
+      
+                <ul>
+                    <li>The "load" button should load movies</li>
+                    <li>The "pickMovie" button should have already taken the current movie information and populate fields for the next section</li>
+                    <li>The "load" button should also enable the "next", "prev" and "pickMovie" buttons </li>
+                    <li>The "next" and "prev" buttons will update the U/I with the appropriate Object information stored in that Array Element</li>
+                    <li>The "pickMovie" button should take the currently displayed movie information and populate fields for the next section</li>
+                </ul>
+
+                <hr>
+
+                <button id="load">Load First Movie</button>
+                <div class="c2-parent">
+                    <button id="prev" disabled>&lt;&lt; Previous</button>
+                    <button id="next" disabled>Next &gt;&gt;</button>
+                    <label class="c2-children" for="c2Movie">Movie:</label>
+                    <input class="c2-children" readonly type="text" id="c2Movie">
+                    <label class="c2-children" for="c2Time">Showtime:</label>
+                    <input class="c2-children" readonly type="text" id="c2Time">
+                    <label class="c2-children" for="c2Price">Price:</label>
+                    <input class="c2-children" readonly type="text" id="c2Price">
+                    <button id="pickMovie" disabled>Pick This Movie</button>
+                </div>
+            </div>
+            <div class="children child3">
+                <h1>Purchase Movie Tickets</h1>
+       
+                <ul>
+                   
+                    <li>The "pickMovie" button in the last section should have already taken the current movie information and populate fields for this section</li>
+                    <li>The "pickMovie" button in the last section should also have already captured the Ticket Pricing information for you to use in your calculation</li>
+                    <li>You can get the Number of Tickets from the UI and Calculate the total cost and display a user-friendly response as feedback to the user regarding their purchase by clicking on the "calculate Total" button</li>
+
+                </ul>
+
+                <hr>
+
+                <div class="c3-parent">
+                    <label class="c3-children" for="c3Movie">Enter Movie Name:</label>
+                    <input class="c3-children" readonly type="text" id="c3Movie">
+                    <label class="c3-children" for="c3Time">Enter Movie Time:</label>
+                    <input class="c3-children" readonly type="text" id="c3Time">
+                    <label class="c3-children" for="c3NumTickets">Enter the Number of Tickets:</label>
+                    <input class="c3-children" type="text" id="c3NumTickets">
+                    <label class="c3-children c3-output" for="c3Total">Amount Due (Including tax):</label>
+                    <input class="c3-children c3-output" readonly type="text" id="c3Total">
+                    <button id="calcTotal">Calculate Total</button>
+                </div>
+                <p id="c3Output"></p>
+            </div>
+        </div>
+    </body>
+
+</html>
